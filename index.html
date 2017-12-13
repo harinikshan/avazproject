@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head><center><h1>PICTURE FINDING</h1></center></head>
+</
+  <link rel="stylesheet" href="index.css">
+  <script>
+  function myFunction() {
+    var para = document.createElement("P");
+    var t = document.createTextNode("This is a paragraph.");
+    para.appendChild(t);
+    document.getElementById("box").appendChild(para);
+  }
+  function interchange()
+{
+ var strDiv1Content = document.getElementById('c1').innerHTML;
+ var strDiv2Content = document.getElementById('c2').innerHTML;
+
+ document.getElementById('c1').innerHTML = strDiv2Content;
+ document.getElementById('c2').innerHTML = strDiv1Content;
+
+}
+function interchange1()
+{
+ var strDiv1Content = document.getElementById('c3').innerHTML;
+ var strDiv2Content = document.getElementById('c4').innerHTML;
+
+ document.getElementById('c3').innerHTML = strDiv2Content;
+ document.getElementById('c4').innerHTML = strDiv1Content;
+
+}
+function interchange2()
+{
+ var strDiv1Content = document.getElementById('c5').innerHTML;
+ var strDiv2Content = document.getElementById('c6').innerHTML;
+
+ document.getElementById('c5').innerHTML = strDiv2Content;
+ document.getElementById('c6').innerHTML = strDiv1Content;
+
+}
+function interchange3()
+{
+ var strDiv1Content = document.getElementById('c7').innerHTML;
+ var strDiv2Content = document.getElementById('c8').innerHTML;
+
+ document.getElementById('c7').innerHTML = strDiv2Content;
+ document.getElementById('c8').innerHTML = strDiv1Content;
+
+}
+function interchange4()
+{
+ var strDiv1Content = document.getElementById('c9').innerHTML;
+ var strDiv2Content = document.getElementById('c10').innerHTML;
+
+ document.getElementById('c9').innerHTML = strDiv2Content;
+ document.getElementById('c10').innerHTML = strDiv1Content;
+
+}
+
+
+
+  function dragStart(event) {
+    event.dataTransfer.setData("c1", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+    document.getElementById("c2").innerHTML ;
+    event.target.style.border ;
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("c1");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById("c2").innerHTML ;
+}
+function interchange()
+{
+ var strDiv1Content = document.getElementById('c1').innerHTML;
+ var strDiv2Content = document.getElementById('c2').innerHTML;
+
+ document.getElementById('c1').innerHTML = strDiv2Content;
+ document.getElementById('c2').innerHTML = strDiv1Content;
+
+}
+function eraseText() {
+    document.getElementById("myForm").value = "";
+}  
+function myFunction1() {
+
+ var letter = document.getElementById("c1").value;
+    var text="APPLE";
+	
+
+    document.getElementById("myForm").innerHTML = text;
+	
+}
+function myFunction2() {
+    var letter = document.getElementById("c2").value;
+      var text="BALL";
+	
+	   document.getElementById("myForm").innerHTML = text;
+}
+	function myFunction3() {
+    var letter = document.getElementById("c3").value;
+    var text="CAT";
+	
+	   document.getElementById("myForm").innerHTML = text;
+}
+	function myFunction4() {
+    var letter = document.getElementById("c4").value;
+    var text="DOG";
+	
+	   document.getElementById("myForm").innerHTML = text;
+}
+	function myFunction5() {
+    var letter = document.getElementById("c5").value;
+    var text="ELEPHANT";
+	
+	   document.getElementById("myForm").innerHTML = text;
+}
+	function myFunction6() {
+    var letter = document.getElementById("c6").value;
+    var text="ORANGE";
+	
+   document.getElementById("myForm").innerHTML = text;
+}	
+function myFunction7() {
+    var letter = document.getElementById("c7").value;
+    var text="NUTS";
+	
+   document.getElementById("myForm").innerHTML = text;
+}	
+function myFunction8() {
+    var letter = document.getElementById("c8").value;
+    var text="LION";
+	
+   document.getElementById("myForm").innerHTML = text;
+}	
+function myFunction9() {
+    var letter = document.getElementById("c9").value;
+    var text="FINGER";
+	
+   document.getElementById("myForm").innerHTML = text;
+}	
+function myFunction10() {
+    var letter = document.getElementById("c10").value;
+    var text="JUG";
+	
+   document.getElementById("myForm").innerHTML = text;
+}	
+ 
+  function myFunction() {
+    document.getElementById("myForm").reset();
+}</script>
+<style>
+.content{
+    background-color: lightgrey;
+    width: 400px;
+    border: 5px solid red;
+    padding: 10px;
+    margin: 5px;
+	border-radius: 50px 20px;
+}
+#center {
+    text-align: center;
+    border: 2px solid green;
+	 border-radius: 25px;
+}
+.card {
+float:left;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+	}
+	
+	.card1 {
+	float:right;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.container {
+    padding: 2px 16px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 50%;
+	}
+</style>
+
+<center>
+<div>
+<div class= "content"id="myForm">
+  
+ 
+  
+</div>
+ 
+</center>
+
+</div>
+<div  id="center">
+  
+
+<body background=C:\Users\ELCOT\Desktop\project\pics\backgroundedited.jpg>
+<div>
+<div>
+<h2>Find the picture using starting letter</h2>
+<p>
+
+
+
+
+</p>
+<div ondrop="interchange()" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="dragStart(event)" draggable="true"id="c1"class="card">
+   <input id="1st"type="image" onclick="myFunction1()" src="pics\apple1.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:A</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange()"ondragstart="dragStart(event)" draggable="true"ondrop="drop(event)" ondragover="allowDrop(event)" id="c2"class="card1">
+   <input id="2nd" onclick="myFunction2()" type="image" src="pics\ball.png" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:B</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+  
+</div>
+<div ondrop="interchange1()" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="dragStart(event)" draggable="true" id="c3" class="card">
+   <input id="2rd"onclick="myFunction3()"type="image" src="pics\cat03.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:C</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+
+<div ondrop="interchange1()"ondragstart="dragStart(event)" draggable="true"ondrop="drop(event)" ondragover="allowDrop(event)"  id="c4"class="card1">
+   <input id="4th"onclick="myFunction4()"type="image" src="pics\dog.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:D</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange2()" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="dragStart(event)" draggable="true" id="c5"class="card">
+  <input id="5th" onclick="myFunction5()"type="image" src="pics\african_elephant_with_calf.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:E</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+  
+</div>
+<div ondrop="interchange2()"ondragstart="dragStart(event)" draggable="true"ondrop="drop(event)" ondragover="allowDrop(event)" id="c6"class="card1">
+   <input id="6th"onclick="myFunction6()"type="image" src="pics\orange.png" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:O</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange3()" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="dragStart(event)" draggable="true"id="c7"class="card">
+  <input id="7th" onclick="myFunction7()"type="image" src="pics\nuts.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:N</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange3()"ondragstart="dragStart(event)" draggable="true"ondrop="drop(event)" ondragover="allowDrop(event)" id="c8"class="card1">
+   <input id="8th"onclick="myFunction8()"type="image" src="pics\lion1.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:L</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange4()" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="dragStart(event)" draggable="true"id="c9"class="card">
+   <input id="9th"type="image" onclick="myFunction9()" src="pics\finger1.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+  
+  <div class="container">
+    <h4><b>HINT:F</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+</div>
+<div ondrop="interchange4()"ondragstart="dragStart(event)" draggable="true"ondrop="drop(event)" ondragover="allowDrop(event)" id="c10"class="card1">
+   <input id="10th" onclick="myFunction10()" type="image" src="C:\Users\ELCOT\Desktop\project\pics\jug1.jpg" ALIGN=”right” alt="Avatar" style="width:30%">
+ 
+ 
+  <div class="container">
+    <h4><b>HINT:J</b></h4> 
+    <p>CLICK THE PICTURE TO VIEW THE ANSWER</p> 
+	 
+  </div>
+  
+</div>
+
+
+</div>
+</div>
+
+</body>
+</head>
+</html>
